@@ -1,0 +1,17 @@
+language: python
+
+script:
+  - echo "no tests"
+
+addons:
+  ssh_known_hosts: kettle.mur-phy.com
+  apt:
+    packages:
+    - sshpass
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash scripts/deploy.sh
+  on:
+    branch: master
