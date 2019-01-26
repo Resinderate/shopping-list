@@ -6,4 +6,4 @@ app = Flask(__name__)
 
 @app.route("/grocery/")
 def hello_world():
-    return "Shopping list!"
+    return "Shopping list v2!"
