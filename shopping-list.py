@@ -18,9 +18,9 @@ class ShoppingList:
         password = os.environ.get("GOOGLE_KEEP_TOKEN")
         self._keep.resume(user_name, password)
 
-    def _get_sort_value_needed_for_end_of_list(self, list):
+    def _get_sort_value_needed_for_end_of_list(self, shopping_list):
         try:
-            return str(int(l.unchecked[-1].sort) - 1)
+            return str(int(shopping_list.unchecked[-1].sort) - 1)
         except IndexError:
             # The shopping list is empty, any sorting will do.
             return 0
